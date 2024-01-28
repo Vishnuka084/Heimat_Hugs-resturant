@@ -38,7 +38,7 @@ const Hero = () => {
         {/*subtitile*/}
             <motion.p
                 variants={fadeIn('down','tween',0.4,1.1)}
-                className='text-white max-w-[54px] mb-8'>{subtitle}
+                className='text-white max-w-[540px] mb-8'>{subtitle}
             </motion.p>
 
         {/*button */}
