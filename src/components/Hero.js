@@ -15,26 +15,38 @@ const Hero = () => {
       <section className='min-h-[980px] bg-hero bg-cover bg-right'>
         {/* header */}
         <header/>
-        <motion.div
-            variants={staggerContainer(0.31)}
-            initial='hidden'
-            className='container mx-auto min-h-[980px] flex
+        <div className='container mx-auto min-h-[980px] flex
             justify-center items-center'>
-          {/*text*/}
-          <motion.div className='text-center flex flex-col items-center'>
-            <motion.div variants={fadeIn('down','tween',0.2,1.1)}
+        {/*text*/}
+          <motion.div
+              variants={staggerContainer(0.31)}
+              initial='hidden'
+              whileInView={'show'}
+              className='text-center flex flex-col items-center'>
+
+        {/*pertitle*/}
+          <motion.div variants={fadeIn('down','tween',0.2,1.1)}
                         className='text-white text-[24px] lg:text-[28px]
             font-primary italic lg:font-medium mb-1'>{pretitle}</motion.div>
-              {/*title */}
-            <motion.h1
+        {/*title */}
+          <motion.h1
                 variants={fadeIn('down','tween',0.3,1.1)}
                 className='h1 mb-5'>
                 {title}
-            </motion.h1>
-            <div className='text-white max-w-[54px] mb-8'>{subtitle}</div>
-            <div className='btn'>{btnText}</div>
+          </motion.h1>
+
+        {/*subtitile*/}
+            <motion.p
+                variants={fadeIn('down','tween',0.4,1.1)}
+                className='text-white max-w-[54px] mb-8'>{subtitle}
+            </motion.p>
+
+        {/*button */}
+            <motion.div variants={fadeIn('down','tween',0.5,1.1)}>
+                <div className='btn'>{btnText}</div>
+            </motion.div>
           </motion.div>
-        </motion.div>
+        </div>
       </section>
   );
 };
