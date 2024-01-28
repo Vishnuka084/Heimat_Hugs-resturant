@@ -10,7 +10,7 @@ import { fadeIn ,staggerContainer} from "../variants";
 
 
 const Hero = () => {
-  const { pretitle ,title ,subtitle btnText} = heroData
+  const { pretitle ,title ,subtitle,btnText} = heroData
   return (
       <section className='min-h-[980px] bg-hero bg-cover bg-right'>
         {/* header */}
@@ -18,10 +18,11 @@ const Hero = () => {
         <div className='container mx-auto'>
           {/*text*/}
           <div>
-            <div>{pretitle}</div>
-            <div>{title}</div>
-            <div>{subtitle}</div>
-            <div>{btnText}</div>
+            <div className='text-white text-[24px] lg:text-[28px]
+            font-primary italic lg:font-medium mb-1'>{pretitle}</div>
+            <div className='h1 mb-5'>{title}</div>
+            <div className='text-white max-w-[54px] mb-8'>{subtitle}</div>
+            <div className='btn'>{btnText}</div>
           </div>
         </div>
       </section>
