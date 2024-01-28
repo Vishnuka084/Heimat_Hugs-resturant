@@ -7,6 +7,7 @@ import Team from './components/Team';
 import Testimonial from './components/Testimonial';
 import Reservation from './components/Reservation';
 import Footer from './components/Footer';
+import Header from "./components/Header";
 
 const App = () => {
   return (
