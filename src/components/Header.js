@@ -41,8 +41,32 @@ const Header = () => {
       <motion.header
       initial='hidden'
       animate={isActive ? 'show' : ''}
-      className='bg-pink-200/20 fixed w-full max-w-[1800px] z-50 py-4'>
-        Header
+      className='bg-pink-200/20 fixed w-full max-w-[1800px] z-50 py-4'
+      >
+        <div className="container mx-auto">
+          <div>
+            {/* menu button */}
+            <div>menu button</div>
+            {/* Logo button */}
+            <div>
+              <a href="#">
+                <img className={`${
+                  isActive ? 'w-[90px] h-[90px]' : 'w-[107px] h-[107px]'}`}
+                     src={LogoWhite}
+                     alt=""
+                />
+              </a>
+            </div>
+            {/* social button */}
+            <div>
+              <Socials/>
+            </div>
+            {/* nav */}
+            <div>
+              <Nav/>
+            </div>
+          </div>
+        </div>
       </motion.header>);
 };
 
