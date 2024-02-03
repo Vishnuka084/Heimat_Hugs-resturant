@@ -31,6 +31,9 @@ const headerVariants = {
 const Header = () => {
   //header state
   const [isActive, setIsActive] = useState(false);
+
+  // nav state
+  const [nav,  setNav] = useState(false);
   // event Listener
   useEffect(()=>{
     window.addEventListener('scroll',() => {
@@ -62,7 +65,8 @@ const Header = () => {
               <Socials/>
             </div>
             {/* nav */}
-            <div>
+            <div className='absolute bg-accent w-[31px] h-[50vh] right-0
+            lg:left-0 top-[120px] bottom-0 z-50 rounded-lg shadow-xl'>
               <Nav/>
             </div>
           </div>
