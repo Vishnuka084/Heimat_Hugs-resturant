@@ -29,7 +29,21 @@ const headerVariants = {
 
 
 const Header = () => {
-  return <header className='bg-pink-200'>Header</header>;
+  //header state
+  const [isActive, setIsActive] = useState(false);
+  // event Listener
+  useEffect(()=>{
+    window.addEventListener('scroll',() => {
+      window.scrollY > 50 ? setIsActive(true) : setIsActive(false);
+    });
+  });
+  return (
+      <motion.header
+      initial='hidden'
+      animate={isActive ? 'show' : ''}
+      className='bg-pink-200/20 fixed w-full max-w-[1800px] z-50 py-4'>
+        Header
+      </motion.header>);
 };
 
 export default Header;
