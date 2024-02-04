@@ -1,30 +1,22 @@
-import React from 'react';
-// import components
-import Hero from './components/Hero';
-import Header from './components/Header';
-import About from './components/About';
-import Menu from './components/Menu';
-import Team from './components/Team';
-import Testimonial from './components/Testimonial';
-import Reservation from './components/Reservation';
-import Footer from './components/Footer';
-import Nav from "./components/Nav";
+import "./App.css";
+import Home from "./Components/Home";
+import About from "./Components/About";
+import Work from "./Components/Work";
+import Testimonial from "./Components/Testimonial";
+import Contact from "./Components/Contact";
+import Footer from "./Components/Footer";
 
-const App = () => {
+function App() {
   return (
-    <div className='h-full bg-pattern bg-repeat max-w-[1800px] mx-auto overflow-hidden'>
-      <Hero />
-      <Header/>
-      <Nav/>
+    <div className="App">
+      <Home />
       <About />
-      <Menu />
-      <Team />
+      <Work />
       <Testimonial />
-      <Reservation />
+      <Contact />
       <Footer />
-      <div className='h-[380px] md:h-[370px]'></div>
     </div>
   );
-};
+}
 
 export default App;
