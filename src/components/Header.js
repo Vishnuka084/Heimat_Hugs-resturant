@@ -28,6 +28,29 @@ const headerVariants = {
 };
 
 
+export const navVariants = {
+  hidden: {
+    clipPath: 'circle(5.8% at 50% 0)',
+    opacity: 0,
+    transition: {
+      type: 'spring',
+      delay: 0.2,
+      stiffness: 300,
+      damping: 140
+    }
+  },
+  show: {
+    opacity: 1,
+    clipPath: 'circle(130% at 50% 0)',
+    transition: {
+      type: 'spring',
+      stiffness: 80,
+
+    },
+
+  },
+};
+
 const Header = () => {
   //header state
   const [isActive, setIsActive] = useState(false);
@@ -49,7 +72,7 @@ const Header = () => {
         <div className="container mx-auto">
           <div>
             {/* menu button */}
-            <div>menu button</div>
+            <div onClick={() => setNav(!nav)}>menu button</div>
             {/* Logo button */}
             <div>
               <a href="#">
@@ -65,10 +88,13 @@ const Header = () => {
               <Socials/>
             </div>
             {/* nav */}
-            <div className='absolute bg-accent w-[31px] h-[50vh] right-0
+            <motion.div variants={navVariants}
+                        initial='hidden'
+                        animate={nav ? 'show' : ''}
+                        className='absolute bg-accent w-[31px] h-[50vh] right-0
             lg:left-0 top-[120px] bottom-0 z-50 rounded-lg shadow-xl'>
               <Nav/>
-            </div>
+            </motion.div>
           </div>
         </div>
       </motion.header>);
