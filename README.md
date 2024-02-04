@@ -1,8 +1,6 @@
 
 # Heimat Hugs restaurant
 
-![Screenshot (113)](https://github.com/Vishnuka084/Heimat_Hugs-resturant/assets/122769900/0186cbf5-e788-4183-a63b-dbf182fe8b90)
-
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
