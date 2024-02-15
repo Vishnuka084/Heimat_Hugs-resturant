@@ -18,5 +18,5 @@ function App() {
     </div>
   );
 }
-
+/*skrgoisrg sgodi*/
 export default App;
